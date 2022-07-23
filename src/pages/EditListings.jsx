@@ -60,7 +60,8 @@ const EditListings = () => {
       toast.error("You cannot edit that listing");
       navigate("/");
     }
-  }, [navigate, auth, listing]);
+    //eslint-disable-next-line
+  }, []);
 
   // fetch listing to edit
   useEffect(() => {
@@ -80,7 +81,8 @@ const EditListings = () => {
       }
     };
     fetchListing();
-  }, [navigate, formData, params.listingId]);
+    //eslint-disable-next-line
+  }, []);
 
   // set UserRef to logged in user
   useEffect(() => {
@@ -97,7 +99,8 @@ const EditListings = () => {
     return () => {
       isMounted.current = false;
     };
-  }, [isMounted, auth, formData, navigate]);
+    //eslint-disable-next-line
+  }, []);
 
   const onSubmit = async (e) => {
     e.preventDefault();
